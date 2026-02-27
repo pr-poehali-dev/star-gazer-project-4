@@ -1,46 +1,29 @@
+import Icon from "@/components/ui/icon"
+
 export function Footer() {
-  const footerLinks = {
-    "Возможности": ["Планирование", "Разработка", "Аналитика", "Запросы клиентов", "Orbit Asks", "Безопасность", "Мобильное приложение"],
-    "Продукт": ["Тарифы", "Методология", "Интеграции", "История изменений", "Документация", "Скачать", "Перейти на Orbit"],
-    "Компания": ["О нас", "Клиенты", "Карьера", "Новости", "README", "Качество", "Бренд"],
-    "Ресурсы": ["Разработчикам", "Статус", "Стартапам", "Сообщить об уязвимости", "DPA", "Конфиденциальность", "Условия"],
-    "Связаться": ["Контакты", "Сообщество", "X (Twitter)", "GitHub", "YouTube"],
-  }
-
   return (
-    <footer className="border-t border-zinc-800 py-16 px-6" style={{ backgroundColor: "#09090B" }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
-          {/* Logo */}
-          <div className="col-span-2 md:col-span-1">
-            <svg width="20" height="20" viewBox="0 0 100 100" fill="none" className="text-white">
-              <path
-                d="M20 30 L50 10 L80 30 L80 70 L50 90 L20 70 Z"
-                fill="currentColor"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path d="M50 10 L50 50 L20 30" fill="#09090B" />
-              <path d="M50 50 L80 70 L50 90" fill="#09090B" />
-            </svg>
+    <footer className="bg-white border-t border-gray-100 py-12 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-md flex items-center justify-center" style={{ backgroundColor: "var(--brand-blue)" }}>
+            <Icon name="Globe" size={12} className="text-white" />
           </div>
-
-          {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="text-white font-medium text-sm mb-4">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-zinc-500 hover:text-zinc-300 transition-colors text-sm">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <span className="font-semibold text-gray-900 text-sm">Alex Nikitin</span>
+          <span className="text-gray-300 text-sm mx-2">·</span>
+          <span className="text-gray-400 text-sm">WordPress Developer</span>
         </div>
+
+        <div className="flex items-center gap-6">
+          <a href="#about" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">About</a>
+          <a href="#services" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Services</a>
+          <a href="#process" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Process</a>
+          <a href="#portfolio" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Portfolio</a>
+          <a href="#contact" className="text-xs text-gray-400 hover:text-gray-600 transition-colors">Contact</a>
+        </div>
+
+        <p className="text-xs text-gray-300">
+          © {new Date().getFullYear()} Alex Nikitin
+        </p>
       </div>
     </footer>
   )
