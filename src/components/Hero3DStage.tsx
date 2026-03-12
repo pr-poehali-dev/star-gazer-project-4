@@ -2,6 +2,7 @@ import { Navbar } from "./Navbar"
 import { LogoCloud } from "./LogoCloud"
 import { FeatureCardsSection } from "./FeatureCardsSection"
 import { AISection } from "./AISection"
+import { AddOnsSection } from "./AddOnsSection"
 import { ProductDirectionSection } from "./ProductDirectionSection"
 import { WorkflowsSection } from "./WorkflowsSection"
 import { CTASection } from "./CTASection"
@@ -131,6 +132,7 @@ export function Hero3DStage() {
         <LogoCloud />
         <FeatureCardsSection />
         <AISection />
+        <AddOnsSection />
         <ProductDirectionSection />
         <WorkflowsSection />
         <CTASection />
